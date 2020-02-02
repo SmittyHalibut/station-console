@@ -1,0 +1,799 @@
+EESchema Schematic File Version 4
+LIBS:StationConsole-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:AudioJack3_Switch J?
+U 1 1 5E4FFA65
+P 3400 1500
+AR Path="/5E4FFA65" Ref="J?"  Part="1" 
+AR Path="/5E4BAF02/5E4FFA65" Ref="J2"  Part="1" 
+F 0 "J2" H 3380 1925 50  0000 C CNN
+F 1 "Radio Speaker" H 3380 1834 50  0000 C CNN
+F 2 "Libraries:Conn-3.5mm-SJ1-3535NG" H 3400 1500 50  0001 C CNN
+F 3 "~" H 3400 1500 50  0001 C CNN
+	1    3400 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Transformer_AUDIO T?
+U 1 1 5E4FFA6C
+P 5200 1500
+AR Path="/5E4FFA6C" Ref="T?"  Part="1" 
+AR Path="/5E4BAF02/5E4FFA6C" Ref="T1"  Part="1" 
+F 0 "T1" H 5200 1967 50  0000 C CNN
+F 1 "Transformer_AUDIO" H 5200 1876 50  0000 C CNN
+F 2 "Libraries:AudioTransformer-4pin" H 5200 1500 50  0001 C CNN
+F 3 "~" H 5200 1500 50  0001 C CNN
+	1    5200 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5E4FFA73
+P 3900 1600
+AR Path="/5E4FFA73" Ref="R?"  Part="1" 
+AR Path="/5E4BAF02/5E4FFA73" Ref="R7"  Part="1" 
+F 0 "R7" H 3959 1646 50  0000 L CNN
+F 1 "100" H 3959 1555 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 3900 1600 50  0001 C CNN
+F 3 "~" H 3900 1600 50  0001 C CNN
+	1    3900 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 1700 3900 1700
+Wire Wire Line
+	3900 1700 4150 1700
+Connection ~ 3900 1700
+Wire Wire Line
+	3600 1300 3750 1300
+Wire Wire Line
+	3900 1500 3900 1300
+Connection ~ 3900 1300
+Wire Wire Line
+	3900 1300 4150 1300
+Wire Wire Line
+	3600 1800 3750 1800
+Wire Wire Line
+	3750 1800 3750 1300
+Connection ~ 3750 1300
+Wire Wire Line
+	3750 1300 3900 1300
+$Comp
+L Device:C_Small C?
+U 1 1 5E4FFA85
+P 4150 1600
+AR Path="/5E4FFA85" Ref="C?"  Part="1" 
+AR Path="/5E4BAF02/5E4FFA85" Ref="C23"  Part="1" 
+F 0 "C23" H 4242 1646 50  0000 L CNN
+F 1 ".1uF" H 4242 1555 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4150 1600 50  0001 C CNN
+F 3 "~" H 4150 1600 50  0001 C CNN
+	1    4150 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 1500 4150 1300
+Connection ~ 4150 1300
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5E4FFA8E
+P 5200 1900
+AR Path="/5E4FFA8E" Ref="#PWR?"  Part="1" 
+AR Path="/5E4BAF02/5E4FFA8E" Ref="#PWR040"  Part="1" 
+F 0 "#PWR040" H 5200 1700 50  0001 C CNN
+F 1 "GNDPWR" H 5204 1746 50  0000 C CNN
+F 2 "" H 5200 1850 50  0001 C CNN
+F 3 "" H 5200 1850 50  0001 C CNN
+	1    5200 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RT?
+U 1 1 5E4FFA94
+P 4550 1450
+AR Path="/5E4FFA94" Ref="RT?"  Part="1" 
+AR Path="/5E4BAF02/5E4FFA94" Ref="RT1"  Part="1" 
+F 0 "RT1" H 4480 1496 50  0000 R CNN
+F 1 "1k" H 4480 1405 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 4550 1450 50  0001 C CNN
+F 3 "~" H 4550 1450 50  0001 C CNN
+	1    4550 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 1300 4550 1300
+Wire Wire Line
+	4700 1450 4800 1450
+Wire Wire Line
+	4800 1450 4800 1300
+Wire Wire Line
+	4150 1700 4550 1700
+Connection ~ 4150 1700
+Wire Wire Line
+	4550 1600 4550 1700
+Connection ~ 4550 1700
+Wire Wire Line
+	4550 1700 4800 1700
+$Comp
+L Amplifier_Operational:NJM4556A U?
+U 1 1 5E4FFAA3
+P 6300 1400
+AR Path="/5E4FFAA3" Ref="U?"  Part="1" 
+AR Path="/5E4BAF02/5E4FFAA3" Ref="U2"  Part="1" 
+F 0 "U2" H 6500 1300 50  0000 C CNN
+F 1 "NJM2068D" H 6550 1550 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6300 1400 50  0001 C CNN
+F 3 "http://www.njr.com/semicon/PDF/NJM4556A_E.pdf" H 6300 1400 50  0001 C CNN
+	1    6300 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDA #PWR?
+U 1 1 5E4FFAAA
+P 5700 1700
+AR Path="/5E4FFAAA" Ref="#PWR?"  Part="1" 
+AR Path="/5E4BAF02/5E4FFAAA" Ref="#PWR045"  Part="1" 
+F 0 "#PWR045" H 5700 1450 50  0001 C CNN
+F 1 "GNDA" H 5705 1527 50  0000 C CNN
+F 2 "" H 5700 1700 50  0001 C CNN
+F 3 "" H 5700 1700 50  0001 C CNN
+	1    5700 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 1300 5700 1300
+Wire Wire Line
+	5600 1700 5700 1700
+$Comp
+L Amplifier_Operational:NJM4556A U?
+U 3 1 5E4FFAB2
+P 6300 1400
+AR Path="/5E4FFAB2" Ref="U?"  Part="3" 
+AR Path="/5E4BAF02/5E4FFAB2" Ref="U2"  Part="3" 
+F 0 "U2" H 6450 1250 50  0000 L CNN
+F 1 "NJM2068D" H 6350 1550 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6300 1400 50  0001 C CNN
+F 3 "http://www.njr.com/semicon/PDF/NJM4556A_E.pdf" H 6300 1400 50  0001 C CNN
+	3    6300 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+9V #PWR?
+U 1 1 5E4FFAB9
+P 6200 1100
+AR Path="/5E4FFAB9" Ref="#PWR?"  Part="1" 
+AR Path="/5E4BAF02/5E4FFAB9" Ref="#PWR047"  Part="1" 
+F 0 "#PWR047" H 6200 950 50  0001 C CNN
+F 1 "+9V" H 6215 1273 50  0000 C CNN
+F 2 "" H 6200 1100 50  0001 C CNN
+F 3 "" H 6200 1100 50  0001 C CNN
+	1    6200 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5E4FFABF
+P 6200 1700
+AR Path="/5E4FFABF" Ref="#PWR?"  Part="1" 
+AR Path="/5E4BAF02/5E4FFABF" Ref="#PWR048"  Part="1" 
+F 0 "#PWR048" H 6200 1500 50  0001 C CNN
+F 1 "GNDPWR" H 6204 1546 50  0000 C CNN
+F 2 "" H 6200 1650 50  0001 C CNN
+F 3 "" H 6200 1650 50  0001 C CNN
+	1    6200 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 1500 5900 1500
+Wire Wire Line
+	5900 1500 5900 1950
+Wire Wire Line
+	5900 1950 6700 1950
+Wire Wire Line
+	6700 1950 6700 1400
+Wire Wire Line
+	6700 1400 6600 1400
+Text GLabel 6800 1400 2    50   Input ~ 0
+RadioBus
+Wire Wire Line
+	6700 1400 6800 1400
+Connection ~ 6700 1400
+$Comp
+L Device:R_POT RV?
+U 1 1 5E4FFACD
+P 3300 2750
+AR Path="/5E4FFACD" Ref="RV?"  Part="1" 
+AR Path="/5E4BAF02/5E4FFACD" Ref="RV1"  Part="1" 
+F 0 "RV1" H 3230 2796 50  0000 R CNN
+F 1 "10k" H 3230 2705 50  0000 R CNN
+F 2 "Libraries:Pot-EVU-F2M" H 3300 2750 50  0001 C CNN
+F 3 "~" H 3300 2750 50  0001 C CNN
+	1    3300 2750
+	1    0    0    -1  
+$EndComp
+Text GLabel 3100 2600 0    50   Input ~ 0
+OpBus
+$Comp
+L power:GNDA #PWR?
+U 1 1 5E4FFAD5
+P 3300 2900
+AR Path="/5E4FFAD5" Ref="#PWR?"  Part="1" 
+AR Path="/5E4BAF02/5E4FFAD5" Ref="#PWR031"  Part="1" 
+F 0 "#PWR031" H 3300 2650 50  0001 C CNN
+F 1 "GNDA" H 3305 2727 50  0000 C CNN
+F 2 "" H 3300 2900 50  0001 C CNN
+F 3 "" H 3300 2900 50  0001 C CNN
+	1    3300 2900
+	1    0    0    -1  
+$EndComp
+Text GLabel 3100 3250 0    50   Input ~ 0
+LogBus
+$Comp
+L Device:R_POT RV?
+U 1 1 5E4FFADC
+P 3300 3400
+AR Path="/5E4FFADC" Ref="RV?"  Part="1" 
+AR Path="/5E4BAF02/5E4FFADC" Ref="RV2"  Part="1" 
+F 0 "RV2" H 3230 3446 50  0000 R CNN
+F 1 "10k" H 3230 3355 50  0000 R CNN
+F 2 "Libraries:Pot-EVU-F2M" H 3300 3400 50  0001 C CNN
+F 3 "~" H 3300 3400 50  0001 C CNN
+	1    3300 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDA #PWR?
+U 1 1 5E4FFAE3
+P 3300 3550
+AR Path="/5E4FFAE3" Ref="#PWR?"  Part="1" 
+AR Path="/5E4BAF02/5E4FFAE3" Ref="#PWR032"  Part="1" 
+F 0 "#PWR032" H 3300 3300 50  0001 C CNN
+F 1 "GNDA" H 3305 3377 50  0000 C CNN
+F 2 "" H 3300 3550 50  0001 C CNN
+F 3 "" H 3300 3550 50  0001 C CNN
+	1    3300 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 2600 3300 2600
+Wire Wire Line
+	3100 3250 3300 3250
+$Comp
+L Device:R_Small R?
+U 1 1 5E4FFAEB
+P 3650 2750
+AR Path="/5E4FFAEB" Ref="R?"  Part="1" 
+AR Path="/5E4BAF02/5E4FFAEB" Ref="R5"  Part="1" 
+F 0 "R5" V 3454 2750 50  0000 C CNN
+F 1 "10k" V 3545 2750 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 3650 2750 50  0001 C CNN
+F 3 "~" H 3650 2750 50  0001 C CNN
+	1    3650 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5E4FFAF2
+P 3650 3400
+AR Path="/5E4FFAF2" Ref="R?"  Part="1" 
+AR Path="/5E4BAF02/5E4FFAF2" Ref="R6"  Part="1" 
+F 0 "R6" V 3454 3400 50  0000 C CNN
+F 1 "10k" V 3545 3400 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 3650 3400 50  0001 C CNN
+F 3 "~" H 3650 3400 50  0001 C CNN
+	1    3650 3400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3450 2750 3550 2750
+Wire Wire Line
+	3450 3400 3550 3400
+$Comp
+L Amplifier_Operational:NJM4556A U?
+U 2 1 5E4FFAFB
+P 4500 2850
+AR Path="/5E4FFAFB" Ref="U?"  Part="2" 
+AR Path="/5E4BAF02/5E4FFAFB" Ref="U2"  Part="2" 
+F 0 "U2" H 4700 2750 50  0000 C CNN
+F 1 "NJM2068D" H 4750 3000 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4500 2850 50  0001 C CNN
+F 3 "http://www.njr.com/semicon/PDF/NJM4556A_E.pdf" H 4500 2850 50  0001 C CNN
+	2    4500 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5E4FFB02
+P 4500 3300
+AR Path="/5E4FFB02" Ref="R?"  Part="1" 
+AR Path="/5E4BAF02/5E4FFB02" Ref="R8"  Part="1" 
+F 0 "R8" V 4304 3300 50  0000 C CNN
+F 1 "100" V 4395 3300 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4500 3300 50  0001 C CNN
+F 3 "~" H 4500 3300 50  0001 C CNN
+	1    4500 3300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 3400 3850 3400
+Wire Wire Line
+	3850 3400 3850 2950
+Wire Wire Line
+	3850 2750 3750 2750
+Wire Wire Line
+	4200 2950 4100 2950
+Wire Wire Line
+	4100 2950 4100 3300
+Wire Wire Line
+	4100 3300 4300 3300
+Wire Wire Line
+	4600 3300 4700 3300
+Wire Wire Line
+	4900 3300 4900 2850
+Wire Wire Line
+	4900 2850 4800 2850
+$Comp
+L Device:C_Small C?
+U 1 1 5E4FFB12
+P 4500 3450
+AR Path="/5E4FFB12" Ref="C?"  Part="1" 
+AR Path="/5E4BAF02/5E4FFB12" Ref="C24"  Part="1" 
+F 0 "C24" V 4750 3450 50  0000 C CNN
+F 1 ".1uF" V 4650 3450 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4500 3450 50  0001 C CNN
+F 3 "~" H 4500 3450 50  0001 C CNN
+	1    4500 3450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4400 3450 4300 3450
+Wire Wire Line
+	4300 3450 4300 3300
+Connection ~ 4300 3300
+Wire Wire Line
+	4300 3300 4400 3300
+Wire Wire Line
+	4600 3450 4700 3450
+Wire Wire Line
+	4700 3450 4700 3300
+Connection ~ 4700 3300
+Wire Wire Line
+	4700 3300 4900 3300
+Wire Wire Line
+	3850 2950 4100 2950
+Connection ~ 3850 2950
+Wire Wire Line
+	3850 2950 3850 2750
+Connection ~ 4100 2950
+$Comp
+L power:GNDA #PWR?
+U 1 1 5E4FFB25
+P 4100 2750
+AR Path="/5E4FFB25" Ref="#PWR?"  Part="1" 
+AR Path="/5E4BAF02/5E4FFB25" Ref="#PWR034"  Part="1" 
+F 0 "#PWR034" H 4100 2500 50  0001 C CNN
+F 1 "GNDA" H 4105 2577 50  0000 C CNN
+F 2 "" H 4100 2750 50  0001 C CNN
+F 3 "" H 4100 2750 50  0001 C CNN
+	1    4100 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 2750 4200 2750
+Text Notes 4600 3650 0    50   ~ 0
+100*.1uF=16kHz
+Text Notes 3750 1850 0    50   ~ 0
+100*.1uF=16kHz
+Connection ~ 4900 2850
+$Comp
+L Device:Transformer_AUDIO T?
+U 1 1 5E4FFB3D
+P 5950 3050
+AR Path="/5E4FFB3D" Ref="T?"  Part="1" 
+AR Path="/5E4BAF02/5E4FFB3D" Ref="T2"  Part="1" 
+F 0 "T2" H 5950 3517 50  0000 C CNN
+F 1 "Transformer_AUDIO" H 5950 3426 50  0000 C CNN
+F 2 "Libraries:AudioTransformer-4pin" H 5950 3050 50  0001 C CNN
+F 3 "~" H 5950 3050 50  0001 C CNN
+	1    5950 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5E4FFB44
+P 5950 3450
+AR Path="/5E4FFB44" Ref="#PWR?"  Part="1" 
+AR Path="/5E4BAF02/5E4FFB44" Ref="#PWR046"  Part="1" 
+F 0 "#PWR046" H 5950 3250 50  0001 C CNN
+F 1 "GNDPWR" H 5954 3296 50  0000 C CNN
+F 2 "" H 5950 3400 50  0001 C CNN
+F 3 "" H 5950 3400 50  0001 C CNN
+	1    5950 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDA #PWR?
+U 1 1 5E4FFB4A
+P 5550 3250
+AR Path="/5E4FFB4A" Ref="#PWR?"  Part="1" 
+AR Path="/5E4BAF02/5E4FFB4A" Ref="#PWR042"  Part="1" 
+F 0 "#PWR042" H 5550 3000 50  0001 C CNN
+F 1 "GNDA" H 5555 3077 50  0000 C CNN
+F 2 "" H 5550 3250 50  0001 C CNN
+F 3 "" H 5550 3250 50  0001 C CNN
+	1    5550 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E4FFB53
+P 6800 3050
+AR Path="/5E4FFB53" Ref="C?"  Part="1" 
+AR Path="/5E4BAF02/5E4FFB53" Ref="C30"  Part="1" 
+F 0 "C30" H 6892 3096 50  0000 L CNN
+F 1 "1nF" H 6892 3005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6800 3050 50  0001 C CNN
+F 3 "~" H 6800 3050 50  0001 C CNN
+	1    6800 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 2850 6800 2950
+$Comp
+L Connector:AudioJack3_Switch J?
+U 1 1 5E4FFB5C
+P 7400 3050
+AR Path="/5E4FFB5C" Ref="J?"  Part="1" 
+AR Path="/5E4BAF02/5E4FFB5C" Ref="J4"  Part="1" 
+F 0 "J4" H 7400 3500 50  0000 R CNN
+F 1 "Radio Mic" H 7550 3400 50  0000 R CNN
+F 2 "Libraries:Conn-3.5mm-SJ1-3535NG" H 7400 3050 50  0001 C CNN
+F 3 "~" H 7400 3050 50  0001 C CNN
+	1    7400 3050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6800 2850 7200 2850
+$Comp
+L Device:C_Small C?
+U 1 1 5E4FFB65
+P 6550 3250
+AR Path="/5E4FFB65" Ref="C?"  Part="1" 
+AR Path="/5E4BAF02/5E4FFB65" Ref="C29"  Part="1" 
+F 0 "C29" V 6321 3250 50  0000 C CNN
+F 1 "10uF" V 6412 3250 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6550 3250 50  0001 C CNN
+F 3 "~" H 6550 3250 50  0001 C CNN
+	1    6550 3250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6800 3250 6800 3150
+Wire Wire Line
+	6800 3250 7200 3250
+Connection ~ 6800 3250
+Text Notes 6150 3500 0    50   ~ 0
+600*10uF=26Hz\n10k*10uF=1.6Hz
+Text Notes 6500 2750 0    50   ~ 0
+600*1nF=265kHz\n10k*1nF=16kHz
+$Comp
+L Device:R_POT RV?
+U 1 1 5E50E792
+P 3700 5000
+AR Path="/5E50E792" Ref="RV?"  Part="1" 
+AR Path="/5E4BAF02/5E50E792" Ref="RV3"  Part="1" 
+F 0 "RV3" H 3630 5046 50  0000 R CNN
+F 1 "10k" H 3630 4955 50  0000 R CNN
+F 2 "Libraries:Pot-EVU-F2M" H 3700 5000 50  0001 C CNN
+F 3 "~" H 3700 5000 50  0001 C CNN
+	1    3700 5000
+	1    0    0    -1  
+$EndComp
+Text GLabel 3600 4850 0    50   Input ~ 0
+RadioBus
+Wire Wire Line
+	3600 4850 3700 4850
+$Comp
+L power:GNDA #PWR?
+U 1 1 5E50E79B
+P 3700 5150
+AR Path="/5E50E79B" Ref="#PWR?"  Part="1" 
+AR Path="/5E4BAF02/5E50E79B" Ref="#PWR033"  Part="1" 
+F 0 "#PWR033" H 3700 4900 50  0001 C CNN
+F 1 "GNDA" H 3705 4977 50  0000 C CNN
+F 2 "" H 3700 5150 50  0001 C CNN
+F 3 "" H 3700 5150 50  0001 C CNN
+	1    3700 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Audio:LM386 U?
+U 1 1 5E50E7A1
+P 4550 5100
+AR Path="/5E50E7A1" Ref="U?"  Part="1" 
+AR Path="/5E4BAF02/5E50E7A1" Ref="U10"  Part="1" 
+F 0 "U10" H 4750 4900 50  0000 L CNN
+F 1 "LM386" H 4700 5000 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4650 5200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm386.pdf" H 4750 5300 50  0001 C CNN
+	1    4550 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E50E7A8
+P 4050 5000
+AR Path="/5E50E7A8" Ref="C?"  Part="1" 
+AR Path="/5E4BAF02/5E50E7A8" Ref="C22"  Part="1" 
+F 0 "C22" V 3821 5000 50  0000 C CNN
+F 1 ".1uF" V 3912 5000 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4050 5000 50  0001 C CNN
+F 3 "~" H 4050 5000 50  0001 C CNN
+	1    4050 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+9V #PWR?
+U 1 1 5E50E7AF
+P 4450 4800
+AR Path="/5E50E7AF" Ref="#PWR?"  Part="1" 
+AR Path="/5E4BAF02/5E50E7AF" Ref="#PWR036"  Part="1" 
+F 0 "#PWR036" H 4450 4650 50  0001 C CNN
+F 1 "+9V" H 4465 4973 50  0000 C CNN
+F 2 "" H 4450 4800 50  0001 C CNN
+F 3 "" H 4450 4800 50  0001 C CNN
+	1    4450 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5E50E7B5
+P 4450 5400
+AR Path="/5E50E7B5" Ref="#PWR?"  Part="1" 
+AR Path="/5E4BAF02/5E50E7B5" Ref="#PWR037"  Part="1" 
+F 0 "#PWR037" H 4450 5200 50  0001 C CNN
+F 1 "GNDPWR" H 4350 5250 50  0000 C CNN
+F 2 "" H 4450 5350 50  0001 C CNN
+F 3 "" H 4450 5350 50  0001 C CNN
+	1    4450 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E50E7BB
+P 4750 4750
+AR Path="/5E50E7BB" Ref="C?"  Part="1" 
+AR Path="/5E4BAF02/5E50E7BB" Ref="C26"  Part="1" 
+F 0 "C26" H 4658 4704 50  0000 R CNN
+F 1 ".1uF" H 4658 4795 50  0000 R CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4750 4750 50  0001 C CNN
+F 3 "~" H 4750 4750 50  0001 C CNN
+	1    4750 4750
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5E50E7C2
+P 4750 4850
+AR Path="/5E50E7C2" Ref="#PWR?"  Part="1" 
+AR Path="/5E4BAF02/5E50E7C2" Ref="#PWR038"  Part="1" 
+F 0 "#PWR038" H 4750 4650 50  0001 C CNN
+F 1 "GNDPWR" H 4950 4800 50  0000 C CNN
+F 2 "" H 4750 4800 50  0001 C CNN
+F 3 "" H 4750 4800 50  0001 C CNN
+	1    4750 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 4800 4550 4650
+Wire Wire Line
+	4550 4650 4750 4650
+$Comp
+L Device:CP_Small C?
+U 1 1 5E50E7CA
+P 5350 5100
+AR Path="/5E50E7CA" Ref="C?"  Part="1" 
+AR Path="/5E4BAF02/5E50E7CA" Ref="C28"  Part="1" 
+F 0 "C28" V 5100 5100 50  0000 C CNN
+F 1 "220uF" V 5200 5100 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P2.50mm_P5.00mm" H 5350 5100 50  0001 C CNN
+F 3 "~" H 5350 5100 50  0001 C CNN
+	1    5350 5100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5E50E7D1
+P 5550 5200
+AR Path="/5E50E7D1" Ref="R?"  Part="1" 
+AR Path="/5E4BAF02/5E50E7D1" Ref="R10"  Part="1" 
+F 0 "R10" H 5609 5246 50  0000 L CNN
+F 1 "10k" H 5609 5155 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 5550 5200 50  0001 C CNN
+F 3 "~" H 5550 5200 50  0001 C CNN
+	1    5550 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5E50E7D8
+P 5550 5300
+AR Path="/5E50E7D8" Ref="#PWR?"  Part="1" 
+AR Path="/5E4BAF02/5E50E7D8" Ref="#PWR043"  Part="1" 
+F 0 "#PWR043" H 5550 5100 50  0001 C CNN
+F 1 "GNDPWR" H 5554 5146 50  0000 C CNN
+F 2 "" H 5550 5250 50  0001 C CNN
+F 3 "" H 5550 5250 50  0001 C CNN
+	1    5550 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack3_Switch J?
+U 1 1 5E50E7DE
+P 6000 4900
+AR Path="/5E50E7DE" Ref="J?"  Part="1" 
+AR Path="/5E4BAF02/5E50E7DE" Ref="J3"  Part="1" 
+F 0 "J3" H 6000 5350 50  0000 R CNN
+F 1 "Speaker" H 6150 5250 50  0000 R CNN
+F 2 "Libraries:Conn-3.5mm-SJ1-3535NG" H 6000 4900 50  0001 C CNN
+F 3 "~" H 6000 4900 50  0001 C CNN
+	1    6000 4900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5E50E7E5
+P 5600 4700
+AR Path="/5E50E7E5" Ref="#PWR?"  Part="1" 
+AR Path="/5E4BAF02/5E50E7E5" Ref="#PWR044"  Part="1" 
+F 0 "#PWR044" H 5600 4500 50  0001 C CNN
+F 1 "GNDPWR" H 5604 4546 50  0000 C CNN
+F 2 "" H 5600 4650 50  0001 C CNN
+F 3 "" H 5600 4650 50  0001 C CNN
+	1    5600 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 4700 5600 4700
+Wire Wire Line
+	5450 5100 5550 5100
+Wire Wire Line
+	5550 5100 5800 5100
+Connection ~ 5550 5100
+Wire Wire Line
+	5250 5100 5050 5100
+Wire Wire Line
+	4250 5000 4150 5000
+Wire Wire Line
+	3950 5000 3850 5000
+$Comp
+L Device:C_Small C?
+U 1 1 5E50E7F2
+P 4650 5600
+AR Path="/5E50E7F2" Ref="C?"  Part="1" 
+AR Path="/5E4BAF02/5E50E7F2" Ref="C25"  Part="1" 
+F 0 "C25" V 4900 5600 50  0000 C CNN
+F 1 "Gain" V 4800 5600 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4650 5600 50  0001 C CNN
+F 3 "~" H 4650 5600 50  0001 C CNN
+	1    4650 5600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4550 5400 4550 5600
+Wire Wire Line
+	4650 5400 4650 5500
+Wire Wire Line
+	4650 5500 4750 5500
+Wire Wire Line
+	4750 5500 4750 5600
+$Comp
+L Device:C_Small C?
+U 1 1 5E50E7FD
+P 5050 5600
+AR Path="/5E50E7FD" Ref="C?"  Part="1" 
+AR Path="/5E4BAF02/5E50E7FD" Ref="C27"  Part="1" 
+F 0 "C27" H 4958 5554 50  0000 R CNN
+F 1 ".1uF" H 4958 5645 50  0000 R CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 5050 5600 50  0001 C CNN
+F 3 "~" H 5050 5600 50  0001 C CNN
+	1    5050 5600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5E50E804
+P 5050 5300
+AR Path="/5E50E804" Ref="R?"  Part="1" 
+AR Path="/5E4BAF02/5E50E804" Ref="R9"  Part="1" 
+F 0 "R9" H 5109 5346 50  0000 L CNN
+F 1 "10" H 5109 5255 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 5050 5300 50  0001 C CNN
+F 3 "~" H 5050 5300 50  0001 C CNN
+	1    5050 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5E50E80B
+P 5050 5700
+AR Path="/5E50E80B" Ref="#PWR?"  Part="1" 
+AR Path="/5E4BAF02/5E50E80B" Ref="#PWR039"  Part="1" 
+F 0 "#PWR039" H 5050 5500 50  0001 C CNN
+F 1 "GNDPWR" H 5050 5550 50  0000 C CNN
+F 2 "" H 5050 5650 50  0001 C CNN
+F 3 "" H 5050 5650 50  0001 C CNN
+	1    5050 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 5500 5050 5400
+Wire Wire Line
+	5050 5200 5050 5100
+Connection ~ 5050 5100
+Wire Wire Line
+	5050 5100 4850 5100
+Text Notes 5200 5750 0    50   ~ 0
+10*.1uF=160kHz
+Text Notes 5850 5450 0    50   ~ 0
+8*220uF=90Hz\n32*220uF=23Hz
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5E50E817
+P 4150 5200
+AR Path="/5E50E817" Ref="#PWR?"  Part="1" 
+AR Path="/5E4BAF02/5E50E817" Ref="#PWR035"  Part="1" 
+F 0 "#PWR035" H 4150 5000 50  0001 C CNN
+F 1 "GNDPWR" H 4150 5050 50  0000 C CNN
+F 2 "" H 4150 5150 50  0001 C CNN
+F 3 "" H 4150 5150 50  0001 C CNN
+	1    4150 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 5200 4250 5200
+$Comp
+L Device:R_Small R?
+U 1 1 5E58D3C0
+P 5700 1500
+AR Path="/5E58D3C0" Ref="R?"  Part="1" 
+AR Path="/5E4BAF02/5E58D3C0" Ref="R11"  Part="1" 
+F 0 "R11" H 5759 1546 50  0000 L CNN
+F 1 "1k" H 5759 1455 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 5700 1500 50  0001 C CNN
+F 3 "~" H 5700 1500 50  0001 C CNN
+	1    5700 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 1400 5700 1300
+Connection ~ 5700 1300
+Wire Wire Line
+	5700 1300 6000 1300
+Wire Wire Line
+	5700 1600 5700 1700
+Connection ~ 5700 1700
+Wire Wire Line
+	4900 2850 5550 2850
+Wire Wire Line
+	6650 3250 6800 3250
+Wire Wire Line
+	6350 3250 6450 3250
+Connection ~ 6800 2850
+Wire Wire Line
+	6350 2850 6800 2850
+$EndSCHEMATC
